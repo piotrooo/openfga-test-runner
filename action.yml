@@ -2,17 +2,21 @@ name: 'OpenFGA Test Runner'
 description: 'Action that allows you to run OpenFGA test cases'
 author: 'Piotr Olaszewski'
 branding:
- icon: fast-forward
- color: gray-dark
+  icon: fast-forward
+  color: gray-dark
 inputs:
- location:
-  description: 'Path to tests location, by default current folder'
-  required: false
+  location:
+    description: 'Path to tests location, by default current folder'
+    required: false
 runs:
- using: composite
- steps:
-  - name: Run tests
-    shell: bash
-    env:
-     ACTION_INPUT_PATH: ${{ inputs.location }}
-    run: ./run-tests.sh
+  using: composite
+  steps:
+    - name: Make script executable
+      run: chmod +x ${{ github.action_path }}/run-tests.sh
+      shell: bash
+
+    - name: Run tests
+      shell: bash
+      env:
+        ACTION_INPUT_PATH: ${{ inputs.location }}
+      run: ${{ github.action_path }}/run-tests.sh
