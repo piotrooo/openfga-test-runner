@@ -5,6 +5,11 @@
 This action recursively searches through the specified location (by default: root directory) for `*.fga.yaml` files and
 executes them as OpenFGA test cases.
 
+## Prerequisites
+
+⚠️ This action **requires** [FGA CLI](https://openfga.dev/docs/getting-started/cli) to be installed in your environment.
+See the example workflow below for installation instructions.
+
 ## Example workflow
 
 Create your GitHub Workflow configuration in `.github/workflows/ci.yml` or similar.
