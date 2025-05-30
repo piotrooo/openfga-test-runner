@@ -15,4 +15,4 @@ runs:
     shell: bash
     env:
      ACTION_INPUT_PATH: ${{ inputs.location }}
-    run: run-tests.sh
+    run: ./run-tests.sh
