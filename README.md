@@ -34,7 +34,7 @@ jobs:
         uses: piotrooo/openfga-test-runner@v0.0.1
 ```
 
-### Usage
+## Usage
 
 ```yaml
 - uses: piotrooo/openfga-test-runner@v0.0.1
