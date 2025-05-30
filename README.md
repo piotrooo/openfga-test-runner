@@ -43,6 +43,10 @@ jobs:
     location: ''
 ```
 
+## Output
+
+<img src="asset/screenshot-1.png" alt="Sample output from the test runner" />
+
 ## License
 
 The scripts and documentation in this project are released under the [MIT License](LICENSE).
